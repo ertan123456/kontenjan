@@ -1,0 +1,72 @@
+{
+  "ADANA": {
+    "population": 2263373,
+    "districts": {
+      "MERKEZ": 2263373,
+      "İMAMOĞLU": 27026,
+      "KARAİSALI": 22877,
+      "POZANTI": 19136
+    }
+  },
+  "AFYONKARAHİSAR": {
+    "population": 751344,
+    "districts": {
+      "MERKEZ": 251799,
+      "İHSANİYE": 28761,
+      "ŞUHUT": 36965
+    }
+  },
+  "ANKARA": {
+    "population": 5802756,
+    "districts": {
+      "MERKEZ": 5802756,
+      "AYAŞ": 13109
+    }
+  },
+  "ANTALYA": {
+    "population": 2696249,
+    "districts": {
+      "MERKEZ": 2696249,
+      "ALANYA": 364180,
+      "KEMER": 47998
+    }
+  },
+  "BURSA": {
+    "population": 3204043,
+    "districts": {
+      "MERKEZ": 3204043
+    }
+  },
+  "İSTANBUL": {
+    "population": 15840900,
+    "districts": {
+      "MERKEZ": 15840900
+    }
+  },
+  "İZMİR": {
+    "population": 4495250,
+    "districts": {
+      "MERKEZ": 4495250
+    }
+  },
+  "KOCAELİ": {
+    "population": 2103687,
+    "districts": {
+      "MERKEZ": 2103687
+    }
+  },
+  "KONYA": {
+    "population": 2277017,
+    "districts": {
+      "MERKEZ": 2277017,
+      "KADINHANI": 32245
+    }
+  },
+  "SAKARYA": {
+    "population": 1107352,
+    "districts": {
+      "MERKEZ": 1107352,
+      "KAYNARCA": 24364
+    }
+  }
+}
