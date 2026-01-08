@@ -1,5 +1,7 @@
 "use client";
 
+
+import coordsRaw from "../lib/coords_tr.json";
 import "leaflet/dist/leaflet.css";
 import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import L from "leaflet";
@@ -20,6 +22,7 @@ type PlaceWithCoord = {
 };
 
 const CACHE_KEY = "tr_quota_geocode_v1";
+const coords = coordsRaw as Record<string, LatLng>;
 
 export default function TurkeyQuotaMap() {
   const [places, setPlaces] = useState<PlaceWithCoord[]>([]);
@@ -40,18 +43,18 @@ export default function TurkeyQuotaMap() {
         const key = cacheKey(row.province, row.district);
 
         const coord =
-          cached[key] ??
-          (await geocodeTurkey(
-            row.district === "MERKEZ"
-              ? `${row.province}, Turkey`
-              : `${row.district}, ${row.province}, Turkey`
-          ));
+         cached[key] ??
+         coords[key] ??
+        (await geocodeTurkey(
+        row.district === "MERKEZ"
+        ? `${row.province}, Turkey`
+        : `${row.district}, ${row.province}, Turkey`
+       ));
 
         if (coord && !cached[key]) {
-          cached[key] = coord;
-          writeCache(cached);
-        }
-
+        cached[key] = coord;
+        writeCache(cached);
+       }
         // icon’u burada 1 kez üret
         const icon = quotaIcon(row.quota);
 
