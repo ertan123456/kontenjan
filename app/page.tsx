@@ -1,6 +1,8 @@
-import dynamic from "next/dynamic";
+export const dynamic = "force-dynamic";
 
-const TurkeyQuotaMap = dynamic(
+import dynamicImport from "next/dynamic";
+
+const TurkeyQuotaMap = dynamicImport(
   () => import("../components/TurkeyQuotaMap").then((m) => m.default),
   { ssr: false }
 );
